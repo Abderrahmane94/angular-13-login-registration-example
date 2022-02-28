@@ -35,19 +35,18 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="name">Name</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
-          name="email"
-          [(ngModel)]="form.email"
+          name="name"
+          [(ngModel)]="form.name"
           required
-          email
-          #email="ngModel"
+          #name="ngModel"
         />
-        <div class="alert-danger" *ngIf="email.errors && f.submitted">
-          <div *ngIf="email.errors['required']">Email is required</div>
-          <div *ngIf="email.errors['email']">
+        <div class="alert-danger" *ngIf="name.errors && f.submitted">
+          <div *ngIf="name.errors['required']">Email is required</div>
+          <div *ngIf="name.errors['email']">
             Email must be a valid email address
           </div>
         </div>
